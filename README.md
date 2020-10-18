@@ -20,7 +20,7 @@ $ git clone https://github.com/Fan-55/cookie_based_authentication.git
 2. Go to the directory 
 
 ```
-$ cd login_test
+$ cd cookie_based_authentication
 ```
 
 3. Install the required packages 
