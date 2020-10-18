@@ -1,0 +1,27 @@
+<div class="container mt-3">
+  <h1 class="text-center">Login</h1>
+  <form action="/users/login" method="POST" id="login-form">
+
+    <div class="form-group">
+      <label for="email-input">Email address:</label>
+      <input type="email" class="form-control {{#if_exist error}}is-invalid{{/if_exist}}" id="email-input"
+        aria-describedby="emailHelp" placeholder="Please enter your email" name="email"
+        value="{{#if_exist error}}{{email}}{{/if_exist}}" required>
+    </div>
+
+    <div class="form-group">
+      <label for="password-input">Password:</label>
+      <input type="password" class="form-control {{#if_exist error}}is-invalid{{/if_exist}}" id="password-input"
+        placeholder="Please enter your password" name="password" required>
+    </div>
+
+    {{#if_exist error}}
+    <small class="alert alert-danger d-block" role="alert">
+      {{error}}
+    </small>
+    {{/if_exist}}
+
+    <button type="submit" class="btn btn-primary">login</button>
+
+  </form>
+</div>
